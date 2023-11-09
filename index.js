@@ -16,6 +16,7 @@ const usersDb = db.collection('users')
 client.connect()
 console.log('Connected to Mongo')
 
+const PORT = process.env.PORT
 app.listen(PORT || 8080, () => console.log('Api listening on port 8080 😎'))
 
 
@@ -61,6 +62,3 @@ app.delete('/:_id', async (req, res) => {
 	const itemDeleted = await blogPosts.findOneAndDelete({ _id: _id })
 	res.send(itemDeleted)
 })
-
-const PORT = process.env.PORT
-
