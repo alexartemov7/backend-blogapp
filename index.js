@@ -16,8 +16,7 @@ const usersDb = db.collection('users')
 client.connect()
 console.log('Connected to Mongo')
 
-const PORT = process.env.PORT
-app.listen(PORT || 8080, () => console.log('Api listening on port 8080 😎'))
+app.listen(PORT, () => console.log(`Api listening on port ${process.env.PORT} 😎`))
 
 
 //GET ALL BLOG POSTS
