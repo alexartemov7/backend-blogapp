@@ -15,6 +15,7 @@ const usersDb = db.collection('users')
 
 client.connect()
 console.log('Connected to Mongo')
+const PORT = process.env.PORT
 
 app.listen(PORT, () => console.log(`Api listening on port ${process.env.PORT} 😎`))
 
